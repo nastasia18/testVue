@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <HeaderComponent></HeaderComponent>
+    <v-main>
+      <v-container>
+        <CafeComponent></CafeComponent>
+      </v-container>
+    </v-main>
+    <FooterComponent></FooterComponent>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CafeComponent from './components/Cafe.vue';
+import HeaderComponent from './components/Header.vue';
+import FooterComponent from './components/Footer.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    CafeComponent,
+    HeaderComponent,
+    FooterComponent
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
